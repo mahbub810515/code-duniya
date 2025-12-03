@@ -1,0 +1,9 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #0D1B2A; 
+  --color-secondary: #415A77; 
+  --color-primary-white: #ff0000; 
+  --color-primary-black: #ff0000; 
+  --font-anek:"Anek Bangla", sans-serif;
+}
