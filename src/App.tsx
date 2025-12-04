@@ -15,7 +15,7 @@ function App() {
   return (
     <>
       <Header />
-      <section className="relative">
+      {/* <section className="relative">
         <Banner />
         <Category />
       </section>
@@ -31,7 +31,8 @@ function App() {
       </section>
       <section>
           <Footer/>
-      </section>
+      </section> */}
+     
     </>
   )
 }

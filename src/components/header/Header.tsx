@@ -4,13 +4,15 @@ import Container from "../common/Container"
 import Listitem from "../ui/Listitem"
 import Button from "../ui/Button"
 import Flex from "../ui/Flex"
-import Image from "../ui/image"
+import Image from "../ui/Image"
+import { TiThMenu } from "react-icons/ti";
 
 type navList = {
   id: number,
   title: string,
 }
 const Header = () => {
+  let [isOpen,setIsOpen]=useState<boolean>(false);
   let [navList, setnavList] = useState<navList[]>([
     {
       id: 1,
@@ -29,19 +31,32 @@ const Header = () => {
       title: "ক্যারিয়ার গাইডলাইন"
     },
   ]);
+
   return (
     <header className="bg-primary py-[15px]">
-      <nav>
+      <nav className="relative">
         <Container>
-          <Flex className="justify-between items-center">
-            <Image imgUrl="images/logo.png" alt="logoImage"/>
-            <ul className="flex gap-[25px] text-white">
+          <Flex className="justify-between items-center ">
+            <Image className="w-[150px] lg:w-auto" imgUrl="images/logo.png" alt="logoImage"/>
+            <ul className="hidden lg:flex gap-[25px] text-white">
               {navList.map((item, index) => (
                 <Listitem className="text-2xl font-semibold font-anek" key={index} item={item} />
               ))}
-
             </ul>
-            <Button className="text-2xl font-semibold font-anek bg-secondary text-white py-[11px] px-[58px] rounded-[10px]" title="কোর্স দেখুন" />
+            {isOpen &&
+            
+            <ul className=" absolute w-full px-4 py-4 top-[65px] left-0 bg-primary lg:hidden lg:flex gap-[25px] text-white">
+              {navList.map((item, index) => (
+                <Listitem className="text-2xl font-semibold font-anek" key={index} item={item} />
+              ))}
+            </ul>
+            }
+            <div className="flex items-center gap-5">
+            <Button className=" font-semibold font-anek bg-secondary text-lg lg:text-2xl text-white py-[11px] px-3 lg:px-[58px] rounded-[10px]" title="কোর্স দেখুন" >
+            </Button>            
+            <TiThMenu onClick={()=>setIsOpen(!isOpen)} className=" text-2xl text-white lg:hidden" />
+           
+            </div>
           </Flex>
         </Container>
 
