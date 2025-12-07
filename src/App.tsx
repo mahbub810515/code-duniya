@@ -15,11 +15,11 @@ function App() {
   return (
     <>
       <Header />
-      {/* <section className="relative">
+      <section className="relative">
         <Banner />
         <Category />
       </section>
-      <section className='relative'>
+      {/* <section className='relative'>
         <Courses/>
         <Advantages/>
       </section>

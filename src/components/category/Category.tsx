@@ -36,26 +36,26 @@ const Category = () => {
         },
     ]
     interface customArrowProps {
-        style?:React.CSSProperties;
-        onClick?:React.MouseEventHandler<HTMLDivElement>;
+        style?: React.CSSProperties;
+        onClick?: React.MouseEventHandler<HTMLDivElement>;
     }
-    function SampleNextArrow(props:customArrowProps) {
-        const {  style, onClick } = props;
+    function SampleNextArrow(props: customArrowProps) {
+        const { style, onClick } = props;
         return (
             <div
                 className=" bg-secondary rounded-[50%] top-2/4 translate-y-[-50%]"
-                style={{ ...style, display: "inline-block", color:"white", fontSize:"40px",width:"40px",height:"40px", position:"absolute",zIndex:"999",right:"0px",}}
+                style={{ ...style, display: "inline-block", color: "white", fontSize: "40px", width: "40px", height: "40px", position: "absolute", zIndex: "999", right: "0px", }}
                 onClick={onClick}
             ><FaAngleRight /> </div>
         );
     }
 
-    function SamplePrevArrow(props:customArrowProps) {
+    function SamplePrevArrow(props: customArrowProps) {
         const { style, onClick } = props;
         return (
             <div
                 className=" bg-secondary rounded-[50%] top-2/4 translate-y-[-50%]"
-                style={{ ...style, position:"absolute",zIndex:"999",left:"-50px", display: "inline-block", color:"white",fontSize:"40px",width:"40px",height:"40px" }}
+                style={{ ...style, position: "absolute", zIndex: "999", left: "-50px", display: "inline-block", color: "white", fontSize: "40px", width: "40px", height: "40px" }}
                 onClick={onClick}
             ><FaAngleLeft /></div>
         );
@@ -66,9 +66,43 @@ const Category = () => {
         infinite: true,
         speed: 500,
         slidesToShow: 4,
-        slidesToScroll: 4,
+        slidesToScroll: 2,
         nextArrow: <SampleNextArrow />,
-        prevArrow: <SamplePrevArrow />
+        prevArrow: <SamplePrevArrow />,
+        className: "center",
+        gap: 20,
+        responsive: [
+            {
+                breakpoint: 1024,
+                settings: {
+                    slidesToShow: 3,
+                    slidesToScroll: 2,
+                    infinite: true,
+                    dots: true
+                }
+            },
+            {
+                breakpoint: 600,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 2,
+                    initialSlide: 2,
+                    arrows: false,
+                    dots: true,
+                }
+            },
+            {
+                breakpoint: 480,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                    arrows: false,
+                    dots: true,
+                }
+            }
+        ]
+
+
     };
     return (
         <section className="w-full absolute top-135 ">
