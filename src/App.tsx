@@ -19,11 +19,11 @@ function App() {
         <Banner />
         <Category />
       </section>
-      {/* <section className='relative'>
+      <section className='relative'>
         <Courses/>
         <Advantages/>
       </section>
-      <section>
+      {/* <section>
         <SpecialFeatures/>
       </section>
       <section>

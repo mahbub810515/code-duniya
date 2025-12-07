@@ -105,7 +105,7 @@ const Category = () => {
 
     };
     return (
-        <section className="w-full absolute top-135 ">
+        <section className="w-full absolute top-110 md:top-140 lg:top-135 ">
             <Container>
                 <Slider {...settings}>
                     {categoryItem.map((item) => (

@@ -58,13 +58,13 @@ const Courses = () => {
         <section className="mt-[180px]">
             <Container>
                 <Title mainTitle="আমাদের কোর্স সমুহ" subTitle="আমাদের সমস্ত কোর্স সুদক্ষ মেন্টর দ্বারা পরিচালিত  এবং সমৃদ্ধ রিসোর্স দ্বারা পরিপূর্ণ" />
-                <div className="mt-[62px]">
-                    <div className="grid grid-cols-3 gap-4">
+                <div className="mt-10 lg:mt-[62px]">
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
                         {courseItem.map((item) => (
                             <CoursesCard item={item} />
                         ))}
                     </div>
-                    <Button className="my-[41px] mx-auto block text-[24px] font-bold font-anek bg-secondary text-white py-[4px] px-[55px] rounded-[10px]" title="আরও কোর্স দেখুন" />
+                    <Button className="my-[41px] mx-auto py-1 px-8 lg:px-[55px] block text-4 lg:text-[24px] font-bold font-anek bg-secondary text-white rounded-[10px]" title="আরও কোর্স দেখুন" />
                 </div>
             </Container>
         </section>

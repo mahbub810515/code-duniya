@@ -2,13 +2,13 @@
 import type { coursesCardType } from "../types/Types";
 import Button from "../ui/Button"
 import Flex from "../ui/Flex"
-import Image from "../ui/image"
+import Image from "../ui/Image"
 import { FaStar } from "react-icons/fa";
 
 
 const CoursesCard = ({item}:{item:coursesCardType}) => {
     return (
-        <div className="max-w-[377px] font-anek text-white ">
+        <div className="max-w-[377px] mx-auto font-anek text-white ">
             <Image imgUrl={item.icon} alt={item.name} />
             <div className="bg-secondary py-4 px-4 ">
                 <Flex className="justify-between">
