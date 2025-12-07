@@ -23,10 +23,10 @@ function App() {
         <Courses/>
         <Advantages/>
       </section>
-      {/* <section>
+      <section>
         <SpecialFeatures/>
       </section>
-      <section>
+      {/* <section>
           <SuccesStory/>
       </section>
       <section>
