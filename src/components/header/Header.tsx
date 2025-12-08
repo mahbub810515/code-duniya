@@ -45,7 +45,7 @@ const Header = () => {
             </ul>
             {isOpen &&
             
-            <ul className=" absolute z-10 w-full px-4 py-4 top-[65px] left-0 bg-secondary lg:hidden lg:flex gap-[25px] text-white">
+            <ul className=" absolute z-10 w-full px-4 py-4 top-[65px] left-0 bg-secondary lg:hidden gap-[25px] text-white">
               {navList.map((item, index) => (
                 <Listitem className="text-2xl font-semibold font-anek" key={index} item={item} />
               ))}

@@ -26,10 +26,10 @@ function App() {
       <section>
         <SpecialFeatures/>
       </section>
-      {/* <section>
+      <section>
           <SuccesStory/>
       </section>
-      <section>
+      {/* <section>
           <Footer/>
       </section> */}
      
