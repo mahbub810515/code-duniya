@@ -29,9 +29,9 @@ function App() {
       <section>
           <SuccesStory/>
       </section>
-      {/* <section>
+      <section>
           <Footer/>
-      </section> */}
+      </section>
      
     </>
   )
